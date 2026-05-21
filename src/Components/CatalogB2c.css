@@ -1,0 +1,202 @@
+.catalog {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+  }
+  
+  .catalog__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .catalog__header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .catalog__subtitle {
+    color: var(--accent-gold); /* Наше фирменное золото */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .catalog__title {
+    color: var(--main-green); /* Наш фирменный изумруд */
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .catalog__divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--main-green);
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+  
+  /* Кнопки переключения категорий */
+  .catalog__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .catalog__tab-btn {
+    background-color: #f4f7f5;
+    color: var(--main-green);
+    border: 1px solid rgba(4, 67, 39, 0.1);
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .catalog__tab-btn:hover {
+    background-color: rgba(4, 67, 39, 0.05);
+    border-color: var(--main-green);
+  }
+  
+  .catalog__tab-btn.active {
+    background-color: var(--main-green);
+    color: #ffffff;
+    border-color: var(--main-green);
+    box-shadow: 0 5px 15px rgba(4, 67, 39, 0.2);
+  }
+  
+  /* Сетка товаров */
+  .catalog__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+  }
+  
+  /* Карточка товара */
+  .product-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(4, 67, 39, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(4, 67, 39, 0.08);
+    border-color: rgba(4, 67, 39, 0.15);
+  }
+  
+  /* Контейнер картинки */
+  .product-card__img-box {
+    background-color: #fcfdfe;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(4, 67, 39, 0.04);
+  }
+  
+  .product-card__img-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+  
+  .product-card:hover .product-card__img-box img {
+    transform: scale(1.05);
+  }
+  
+  /* Тэг бренда на карточке */
+  .product-card__brand-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--main-green);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  /* Описание внутри карточки */
+  .product-card__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  
+  .product-card__name {
+    color: #333333;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+    height: 44px; /* Жестко держим высоту под 2 строки, чтобы кнопки не плясали */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  /* Подвал карточки: Цена + Кнопка */
+  .product-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  
+  .product-card__price {
+    color: var(--main-green);
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  
+  /* Фиолетовая кнопка Uzum */
+  .product-card__btn {
+    background-color: #7000ff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .product-card__btn:hover {
+    background-color: #5b00d6;
+    box-shadow: 0 4px 12px rgba(112, 0, 255, 0.3);
+    transform: translateY(-1px);
+    color: #ffffff !important;
+  }
+  
+  @media (max-width: 576px) {
+    .catalog__grid {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,165 @@
+.brands-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.brands-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.brands-section__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.brands-section__subtitle {
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.brands-section__title {
+  color: var(--main-green);
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.brands-section__divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--main-green);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* МАГИЯ СЕТКИ: 3 колонки (6 фракций) */
+.brands-section__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+/* Карточка бренда */
+.brand-card {
+  background-color: #fcfdfe;
+  border: 1px solid rgba(4, 67, 39, 0.08);
+  border-radius: 16px;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  grid-column: span 2; /* Обычная карточка занимает 1/3 */
+}
+
+/* Центрирование последних двух */
+.brand-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+.brand-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px rgba(4, 67, 39, 0.06);
+  border-color: var(--main-green);
+}
+
+/* Блок под логотип - СТАЛ ЧИСТЫМ */
+.brand-card__logo-box {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрируем логотип в боксе */
+  margin-bottom: 25px;
+  width: 100%;
+  overflow: hidden; /* Гарантия, что лого не вылезет */
+}
+
+.brand-card__logo-img {
+  max-height: 100%;
+  max-width: 180px;
+  object-fit: contain; /* Логотип не растягивается, сохраняет пропорции */
+  display: block;
+}
+
+.brand-card__desc {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+/* Подвал карточки - СЮДА ПЕРЕЕХАЛ БЕДЖ */
+.brand-card__footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column; /* Элементы друг под другом */
+  gap: 15px;
+}
+
+.brand-card__footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-card__guarantee {
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Метка-тэг - ТЕПЕРЬ СНИЗУ */
+.brand-card__badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+/* Адаптив под планшеты и мобилки */
+@media (max-width: 992px) {
+  .brands-section__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .brand-card {
+    grid-column: span 2 !important;
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .brands-section__grid {
+    grid-template-columns: 1fr;
+  }
+  .brand-card {
+    grid-column: span 1 !important;
+    padding: 25px 20px;
+  }
+  .brand-card__footer-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

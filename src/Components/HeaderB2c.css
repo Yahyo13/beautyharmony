@@ -1,0 +1,208 @@
+.header-b2c {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(4, 67, 39, 0.95); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .header-b2c__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Логотип */
+  .header-b2c__logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff; 
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* ФИКС: При наведении Harmony остается строго белым */
+  .header-b2c__logo:hover {
+    color: #ffffff;
+  }
+  
+  .header-b2c__logo-accent {
+    color: #d4af37; 
+    margin-right: 2px;
+  }
+  
+  /* Меню */
+  .header-b2c__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-b2c__menu a {
+    text-decoration: none;
+    color: #e0e0e0; 
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .header-b2c__menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d4af37;
+    transition: width 0.3s ease;
+  }
+  
+  .header-b2c__menu a:hover {
+    color: #d4af37; 
+  }
+  
+  .header-b2c__menu a:hover::after {
+    width: 100%;
+  }
+  
+  /* Выделенная ссылка для оптовиков (B2B) */
+  .header-b2c__menu-b2b {
+    color: #d4af37 !important;
+    font-weight: 600 !important;
+    border: 1px solid #d4af37;
+    padding: 6px 14px;
+    border-radius: 15px;
+    transition: all 0.3s ease !important;
+  }
+  
+  .header-b2c__menu-b2b::after {
+    display: none; 
+  }
+  
+  .header-b2c__menu-b2b:hover {
+    background-color: #d4af37;
+    color: #044327 !important;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  }
+  
+  /* Кнопка Uzum */
+  .header-b2c__uzum-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #7000ff; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  /* ФИКС: При наведении текст и иконка железно белые */
+  .header-b2c__uzum-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(112, 0, 255, 0.4);
+    color: #ffffff !important;
+  }
+  
+  .header-b2c__uzum-link:hover svg {
+    color: #ffffff !important;
+  }
+  
+  /* Бургер для мобилок */
+  .header-b2c__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .header-b2c__burger span {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff; 
+    transition: all 0.3s ease;
+  }
+  
+  /* Мобильная адаптивность */
+  @media (max-width: 992px) {
+    .header-b2c__burger {
+      display: flex;
+      z-index: 1001;
+    }
+  
+    .header-b2c__nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background-color: #044327; 
+      border-left: 1px solid rgba(212, 175, 55, 0.1);
+      padding: 100px 30px;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    .header-b2c__nav--open {
+      right: 0;
+    }
+  
+    .header-b2c__menu {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  
+    .header-b2c__menu a {
+      font-size: 1.1rem;
+    }
+  
+    .header-b2c__menu-b2b {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .header-b2c__actions {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  
+    .header-b2c__burger--active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background-color: #d4af37; 
+    }
+    .header-b2c__burger--active span:nth-child(2) {
+      opacity: 0;
+    }
+    .header-b2c__burger--active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: #d4af37;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-b2c__actions {
+      display: none;
+    }
+  }

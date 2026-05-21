@@ -1,0 +1,148 @@
+.pharmacy {
+    padding: 100px 20px;
+    background-color: #fcfdfe; /* Слегка прохладный чистый фон */
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+  }
+  
+  .pharmacy__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+  }
+  
+  /* Левая часть: Контакты */
+  .pharmacy__info {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .pharmacy__subtitle {
+    color: var(--accent-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .pharmacy__title {
+    color: var(--main-green);
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .pharmacy__divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--main-green);
+    margin-bottom: 25px;
+    border-radius: 2px;
+  }
+  
+  .pharmacy__text {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Элементы списка контактов */
+  .pharmacy__details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .pharmacy__detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  /* Круглые иконки в нашем стиле */
+  .pharmacy__icon-box {
+    background-color: rgba(4, 67, 39, 0.06);
+    color: var(--main-green);
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+  
+  .pharmacy__detail-text h4 {
+    color: var(--main-green);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+  }
+  
+  .pharmacy__detail-text p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0 0 4px 0;
+  }
+  
+  .pharmacy__detail-text p a {
+    transition: color 0.3s ease;
+  }
+  
+  .pharmacy__detail-text p a:hover {
+    color: var(--accent-gold); /* Телефон плавно золотеет при наведении */
+  }
+  
+  .pharmacy__detail-text span {
+    color: #888888;
+    font-size: 0.85rem;
+    display: block;
+  }
+  
+  /* Правая часть: Карта */
+  .pharmacy__map-box {
+    flex: 1.2;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(4, 67, 39, 0.06);
+    border: 1px solid rgba(4, 67, 39, 0.05);
+    background-color: #eeeeee;
+  }
+  
+  .pharmacy__iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: grayscale(0.1) contrast(1.05); /* Легкий стильный фильтр для карты */
+    transition: filter 0.3s ease;
+  }
+  
+  .pharmacy__map-box:hover .pharmacy__iframe {
+    filter: grayscale(0); /* При наведении карта становится полностью цветной */
+  }
+  
+  /* Мобильный адаптив */
+  @media (max-width: 992px) {
+    .pharmacy__container {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .pharmacy__info {
+      max-width: 100%;
+    }
+    .pharmacy__map-box {
+      width: 100%;
+      height: 350px;
+    }
+  }

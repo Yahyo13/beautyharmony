@@ -1,0 +1,20 @@
+/* Обертка для всего контента сайта */
+.app-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Отступ сверху для главного контента, чтобы Header его не перекрывал */
+main {
+  margin-top: 0; /* Увеличили с 75px до 100px, чтобы контент ушел ниже */
+  flex-grow: 1;
+}
+/* Вспомогательный класс для контейнеров (чтобы контент был по центру) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}

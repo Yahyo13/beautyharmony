@@ -1,0 +1,179 @@
+.footer {
+    background-color: var(--main-green); /* Наш глубокий изумрудный */
+    color: #ffffff;
+    padding: 80px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+  }
+  
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    width: 100%;
+  }
+  
+  /* ЛЕВАЯ СТОРОНА: ФОРМА */
+  .footer__form-box {
+    flex: 1.2;
+    max-width: 550px;
+  }
+  
+  .footer__subtitle {
+    color: var(--accent-gold); /* Наше золото */
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+  }
+  
+  .footer__text {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer__form input {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 16px 20px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .footer__form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .footer__form input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+  }
+  
+  .footer__submit-btn {
+    background-color: var(--accent-gold);
+    color: var(--main-green);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 16px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .footer__submit-btn:hover {
+    background-color: #e5bf42;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+  }
+  
+  /* ПРАВАЯ СТОРОНА: ИНФО */
+  .footer__info-box {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .footer__logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  
+  .footer__logo span {
+    color: var(--accent-gold);
+  }
+  
+  .footer__company-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+  }
+  
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  a.footer__contact-link:hover {
+    color: var(--accent-gold);
+  }
+  
+  /* НИЖНЯЯ ПЛАШКА */
+  .footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 25px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer__bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  /* АДАПТИВ ПОД МОБИЛКИ */
+  @media (max-width: 850px) {
+    .footer__container {
+      flex-direction: column;
+      gap: 50px;
+      padding-bottom: 40px;
+    }
+    .footer__form-box, .footer__info-box {
+      max-width: 100%;
+    }
+    .footer__bottom-container {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }

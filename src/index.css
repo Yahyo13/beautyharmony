@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* Глобальный сброс стилей, чтобы ничего не ехало */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-green: #044327;  /* Наш благородный изумрудный */
+  --accent-gold: #d4af37; /* Наше золото */
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --bg-cream: #f4f7f5;    /* Мягкий кремовый фон */
+}
+
+html {
+  scroll-behavior: smooth; /* Плавный скролл по ссылкам */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  overflow-x: hidden; /* Блокируем горизонтальный скролл на мобилках */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Сбрасываем дефолтные стили ссылок и списков */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
